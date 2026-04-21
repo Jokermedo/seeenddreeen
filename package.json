@@ -1,0 +1,46 @@
+{
+  "name": "sendreen-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:ci": "jest --coverage --runInBand",
+    "clean": "node scripts/clean.mjs",
+    "audit": "npm audit --audit-level moderate",
+    "deps:check": "npm outdated",
+    "quality": "npm run lint && npm run test:ci && npm run build",
+    "quality:report": "node scripts/quality-report.mjs",
+    "maintenance": "npm run clean && npm run quality && npm run audit && npm run quality:report",
+    "deploy:check": "npm run quality && node -e \"console.log('Deployment checks passed')\""
+  },
+  "dependencies": {
+    "cloudinary": "^2.9.0",
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.8.0",
+    "next": "16.2.3",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.2",
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.3",
+    "jest": "^30.3.0",
+    "jest-environment-jsdom": "^30.3.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
