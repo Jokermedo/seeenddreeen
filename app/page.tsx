@@ -46,7 +46,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F2F2F7] pb-24">
+    <div className="min-h-screen bg-[#FDF6F9] pb-24">
 
       {/* HEADER - iOS sticky */}
       <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-stone-200/60">
