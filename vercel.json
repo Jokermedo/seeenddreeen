@@ -7,9 +7,6 @@
   "functions": {
     "app/**/*.tsx": {
       "maxDuration": 10
-    },
-    "lib/actions.ts": {
-      "maxDuration": 10
     }
   },
 
