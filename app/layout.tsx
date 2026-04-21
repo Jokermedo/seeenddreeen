@@ -59,7 +59,7 @@ export default function RootLayout({
       className="h-full antialiased"
     >
       <head>
-        <link rel="preload" as="image" href="/assets/product-main.jpg" />
+        <link rel="preload" as="image" href="/assets/logo.jpeg" />
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

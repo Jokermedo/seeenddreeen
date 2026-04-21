@@ -6,7 +6,7 @@ export const orderSchema = z
     name: z
       .string()
       .trim()
-      .min(3, "يجب إدخال الاسم الثلاثي")
+      .min(2, "يجب إدخال الاسم الثلاثي")
       .regex(/^[\p{L}\s]+$/u, "يجب أن يحتوي الاسم على أحرف فقط"),
     phone: z
       .string()
