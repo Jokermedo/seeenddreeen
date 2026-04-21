@@ -6,7 +6,7 @@ import { QuantitySelector } from "../QuantitySelector";
 import { Spinner } from "../Spinner";
 import { submitOrder } from "@/lib/actions";
 import { calculateTotalPrice, validateFormData, uploadImageToCloudinary } from "@/lib/utils";
-import { PRODUCT_PRICE, ADMIN_WHATSAPP_DISPLAY, PRODUCT_ADVANCE_PAYMENT, PRODUCT_CASH_ON_DELIVERY, VODAFONE_CASH_NUMBER, INSTAPAY_NUMBER } from "@/lib/constants";
+import { PRODUCT_PRICE, PRODUCT_ADVANCE_PAYMENT, PRODUCT_CASH_ON_DELIVERY, VODAFONE_CASH_NUMBER, INSTAPAY_NUMBER } from "@/lib/constants";
 import { FormData } from "@/lib/types";
 import { egyptLocations, governorates } from "@/lib/egypt-locations";
 
@@ -289,12 +289,8 @@ export function OrderWizard() {
                   {/* Transfer number box */}
                   <div className="bg-stone-900 rounded-2xl p-5 text-center relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-rose-500/10 to-transparent" />
-                    <p className="text-stone-400 text-xs font-semibold mb-1 relative">
-                      {formData.paymentMethod === "vodafone" ? "رقم فودافون كاش" : "رقم إنستا باي"}
-                    </p>
-                    <p className="text-3xl font-black text-white font-mono tracking-widest relative">
-                      {formData.paymentMethod === "vodafone" ? VODAFONE_CASH_NUMBER : INSTAPAY_NUMBER}
-                    </p>
+                    <p className="text-stone-400 text-xs font-semibold mb-1 relative">رقم المحفظة ({formData.paymentMethod === "vodafone" ? "فودافون كاش" : "إنستا باي"})</p>
+                    <p className="text-3xl font-black text-white font-mono tracking-widest relative">{VODAFONE_CASH_NUMBER}</p>
                     <div className="mt-3 flex items-center justify-center gap-2 relative">
                       <span className="bg-rose-500/20 text-rose-400 text-xs font-bold px-3 py-1.5 rounded-full">
                         💰 حوّلي {PRODUCT_ADVANCE_PAYMENT} ج.م مقدم فقط

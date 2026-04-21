@@ -19,6 +19,7 @@ export const ADMIN_WHATSAPP_DISPLAY = '01035253389';
 // Payment Wallet Numbers
 export const VODAFONE_CASH_NUMBER = '01159387704';
 export const INSTAPAY_NUMBER = '01159387704';
+export const PAYMENT_DISPLAY = '01159387704';
 
 // UI Configuration
 export const TOAST_INITIAL_DELAY = 5000;

@@ -53,3 +53,5 @@ IMG_*.jpeg
 sendreen-store/
 New folder/
 .env.local
+
+.vercel
